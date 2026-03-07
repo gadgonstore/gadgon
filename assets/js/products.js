@@ -1,0 +1,116 @@
+/**
+ * GADGON – Products Data
+ * Edit this file to add/remove/change products.
+ * WhatsApp number is set at the top — change it!
+ */
+
+// ============================
+// CONFIG — CHANGE YOUR NUMBER HERE
+// ============================
+const GADGON_CONFIG = {
+  whatsappNumber: '96170000000',   // ← Replace with your real WhatsApp number (no + or spaces)
+  storeName: 'GADGON',
+  greeting: 'Hi GADGON! 👋 I\'m interested in:'
+};
+
+// ============================
+// PRODUCTS DATABASE
+// ============================
+const PRODUCTS = [
+  {
+    id: 1,
+    name: 'ProAir Wireless Earbuds',
+    category: 'audio',
+    categoryLabel: '🎧 Audio',
+    price: '$89',
+    oldPrice: '$129',
+    badge: 'hot',
+    image: 'assets/images/product-earbuds.png',
+    description: 'True wireless earbuds with Active Noise Cancellation, 30-hour battery life, and premium Hi-Fi sound. Perfect for music lovers on the go.',
+    specs: ['ANC', '30hr Battery', 'Hi-Fi Sound', 'IPX5 Waterproof', 'Touch Controls']
+  },
+  {
+    id: 2,
+    name: 'NexWatch Ultra Smart',
+    category: 'wearables',
+    categoryLabel: '⌚ Wearables',
+    price: '$199',
+    oldPrice: '$259',
+    badge: 'new',
+    image: 'assets/images/product-smartwatch.png',
+    description: 'Next-gen smartwatch with AMOLED display, health monitoring, GPS, and 7-day battery. Your ultimate fitness and lifestyle companion.',
+    specs: ['AMOLED Display', 'GPS Built-in', 'Heart Rate', '7-Day Battery', 'Always On']
+  },
+  {
+    id: 3,
+    name: 'BoomBox X360 Speaker',
+    category: 'audio',
+    categoryLabel: '🎧 Audio',
+    price: '$69',
+    oldPrice: '$99',
+    badge: 'sale',
+    image: 'assets/images/product-speaker.png',
+    description: '360-degree surround sound speaker with powerful bass, waterproof design, and 24-hour playtime. Party anywhere, anytime.',
+    specs: ['360° Sound', 'IPX7 Waterproof', '24hr Play', 'Party Mode', 'LED Lights']
+  },
+  {
+    id: 4,
+    name: 'ZenPhone Pro Max',
+    category: 'phones',
+    categoryLabel: '📱 Phones',
+    price: '$549',
+    oldPrice: '$699',
+    badge: 'new',
+    image: 'assets/images/product-phone.png',
+    description: 'Flagship smartphone with 200MP camera system, 6000mAh battery, and next-gen AI processing. Experience the future today.',
+    specs: ['200MP Camera', '6000mAh', 'AI Processor', '5G Ready', '120Hz Display']
+  },
+  {
+    id: 5,
+    name: 'AirPods Max Clone HD',
+    category: 'audio',
+    categoryLabel: '🎧 Audio',
+    price: '$49',
+    oldPrice: '$79',
+    badge: 'hot',
+    image: 'assets/images/product-earbuds.png',
+    description: 'Over-ear headphones with premium sound quality, foldable design, and 40-hour battery. Studio-grade audio for everyone.',
+    specs: ['Over-Ear', '40hr Battery', 'Foldable', 'Deep Bass', 'Noise Isolation']
+  },
+  {
+    id: 6,
+    name: 'SmartBand Fitness Pro',
+    category: 'wearables',
+    categoryLabel: '⌚ Wearables',
+    price: '$39',
+    oldPrice: '$59',
+    badge: 'sale',
+    image: 'assets/images/product-smartwatch.png',
+    description: 'Track your health 24/7 with this slim fitness band. Heart rate, SpO2, sleep tracking, and 14-day battery life.',
+    specs: ['SpO2 Monitor', '14-Day Battery', 'Sleep Track', 'Slim Design', 'Waterproof']
+  },
+  {
+    id: 7,
+    name: 'PowerHub 10000 mAh',
+    category: 'accessories',
+    categoryLabel: '⚡ Accessories',
+    price: '$29',
+    oldPrice: '$45',
+    badge: 'hot',
+    image: 'assets/images/product-phone.png',
+    description: 'Compact 10000mAh power bank with 65W fast charging, dual USB-C ports, and airline-approved design. Never run out of power.',
+    specs: ['10000mAh', '65W Fast Charge', 'Dual USB-C', 'Ultra Compact', 'LED Indicator']
+  },
+  {
+    id: 8,
+    name: 'SmartHub Mini Hub',
+    category: 'smart-home',
+    categoryLabel: '🏠 Smart Home',
+    price: '$79',
+    oldPrice: '$119',
+    badge: 'new',
+    image: 'assets/images/hero-banner.png',
+    description: 'Control all your smart home devices with this powerful hub. Compatible with Alexa, Google Home, and 5000+ smart devices.',
+    specs: ['Alexa Compatible', 'Google Home', '5000+ Devices', 'WiFi 6', 'Voice Control']
+  }
+];
