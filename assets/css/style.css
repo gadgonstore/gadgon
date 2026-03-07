@@ -663,11 +663,20 @@ button {
   box-shadow: 0 4px 12px rgba(155, 89, 232, 0.4);
   transition: all var(--transition-bounce);
   z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8) translateY(10px);
+}
+
+.product-card:hover .card-wa-quick {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
 }
 
 .card-wa-quick:hover,
 .card-wa-quick:active {
-  transform: scale(1.15);
+  transform: scale(1.15) translateY(0) !important;
   background: var(--whatsapp-dark);
 }
 
