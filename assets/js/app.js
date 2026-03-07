@@ -104,7 +104,7 @@ function createProductCard(product, index) {
         `🛍️ Hi GADGON! I want to order:\n\n` +
         `📦 Product: ${product.name}\n` +
         `💰 Price: ${product.price}\n` +
-        `🔗 Link: https://gadgon.vercel.app\n\n` +
+        `🔗 Link: https://www.gadgon.com\n\n` +
         `Please confirm availability! ✅`
     );
     const waUrl = `https://wa.me/${GADGON_CONFIG.whatsappNumber}?text=${waMsg}`;
@@ -178,7 +178,7 @@ function populateModal(product) {
         `🛍️ Hi GADGON! I want to order:\n\n` +
         `📦 Product: ${product.name}\n` +
         `💰 Price: ${product.price}\n` +
-        `🔗 Link: https://gadgon.vercel.app\n\n` +
+        `🔗 Link: https://www.gadgon.com\n\n` +
         `Please confirm availability! ✅`
     );
     const waUrl = `https://wa.me/${GADGON_CONFIG.whatsappNumber}?text=${waMsg}`;
