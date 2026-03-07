@@ -437,7 +437,7 @@ function showAboutModal() {
            target="_blank"
            style="
             display: flex; align-items: center; justify-content: center; gap: 10px;
-            padding: 14px; background: #25D366; border-radius: 14px;
+            padding: 14px; background: #9b59e8; border-radius: 14px;
             color: white; font-weight: 700; font-size: 15px; text-decoration: none;
            ">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
