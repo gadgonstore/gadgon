@@ -101,7 +101,11 @@ function createProductCard(product, index) {
     card.setAttribute('id', `product-card-${product.id}`);
 
     const waMsg = encodeURIComponent(
-        `${GADGON_CONFIG.greeting} *${product.name}* (${product.price})\n\nCan you give me more info? 🙏`
+        `🛍️ Hi GADGON! I want to order:\n\n` +
+        `📦 Product: ${product.name}\n` +
+        `💰 Price: ${product.price}\n` +
+        `🔗 Link: https://gadgon.vercel.app\n\n` +
+        `Please confirm availability! ✅`
     );
     const waUrl = `https://wa.me/${GADGON_CONFIG.whatsappNumber}?text=${waMsg}`;
 
@@ -171,7 +175,11 @@ function closeModal() {
 
 function populateModal(product) {
     const waMsg = encodeURIComponent(
-        `${GADGON_CONFIG.greeting} *${product.name}* (${product.price})\n\nI'd like to order this! 🛒`
+        `🛍️ Hi GADGON! I want to order:\n\n` +
+        `📦 Product: ${product.name}\n` +
+        `💰 Price: ${product.price}\n` +
+        `🔗 Link: https://gadgon.vercel.app\n\n` +
+        `Please confirm availability! ✅`
     );
     const waUrl = `https://wa.me/${GADGON_CONFIG.whatsappNumber}?text=${waMsg}`;
 
