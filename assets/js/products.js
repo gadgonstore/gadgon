@@ -8,7 +8,7 @@
 // CONFIG — CHANGE YOUR NUMBER HERE
 // ============================
 const GADGON_CONFIG = {
-  whatsappNumber: '96170000000',   // ← Replace with your real WhatsApp number (no + or spaces)
+  whatsappNumber: '97477865120',   // Qatar WhatsApp number
   storeName: 'GADGON',
   greeting: 'Hi GADGON! 👋 I\'m interested in:'
 };
