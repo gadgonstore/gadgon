@@ -147,9 +147,10 @@ button {
 }
 
 .splash-logo-img {
-  width: 160px;
+  width: 220px;
+  max-width: 80vw;
   height: auto;
-  filter: drop-shadow(0 0 30px rgba(108, 99, 255, 0.6));
+  filter: drop-shadow(0 0 30px rgba(155, 89, 232, 0.6));
 }
 
 .splash-tagline {
@@ -230,9 +231,10 @@ button {
 }
 
 .logo-img {
-  height: 36px;
-  width: auto;
-  filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.4));
+  width: 140px;
+  height: auto;
+  max-width: 40vw;
+  filter: drop-shadow(0 0 10px rgba(155, 89, 232, 0.4));
 }
 
 .header-actions {
@@ -317,7 +319,7 @@ button {
 
 .search-input-wrap:focus-within {
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(155, 89, 232, 0.15);
 }
 
 .search-input-wrap svg {
@@ -391,7 +393,7 @@ button {
   background: var(--gradient-main);
   color: white;
   border-color: transparent;
-  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(155, 89, 232, 0.4);
 }
 
 /* ============================
@@ -442,8 +444,8 @@ button {
   align-items: center;
   gap: 6px;
   padding: 5px 14px;
-  background: rgba(108, 99, 255, 0.2);
-  border: 1px solid rgba(108, 99, 255, 0.4);
+  background: rgba(155, 89, 232, 0.2);
+  border: 1px solid rgba(155, 89, 232, 0.4);
   border-radius: var(--radius-full);
   font-size: 12px;
   font-weight: 600;
@@ -838,7 +840,7 @@ button {
 }
 
 .modal-nav:hover {
-  background: rgba(108, 99, 255, 0.5);
+  background: rgba(155, 89, 232, 0.5);
 }
 
 .modal-content {
@@ -1119,7 +1121,7 @@ button {
 }
 
 .nav-item.active svg {
-  filter: drop-shadow(0 0 8px rgba(108, 99, 255, 0.6));
+  filter: drop-shadow(0 0 8px rgba(155, 89, 232, 0.6));
 }
 
 .nav-center-btn {
@@ -1135,7 +1137,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 25px rgba(108, 99, 255, 0.5);
+  box-shadow: 0 8px 25px rgba(155, 89, 232, 0.5);
   transition: all var(--transition-bounce);
   color: white;
 }
