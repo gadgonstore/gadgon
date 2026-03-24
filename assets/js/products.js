@@ -4,7 +4,7 @@
  */
 
 const GADGON_CONFIG = {
-  "whatsappNumber": "97477865120 1",
+  "whatsappNumber": "97477865120",
   "storeName": "GADGON",
   "greeting": "Hi GADGON! 👋 I'm interested in:"
 };
@@ -15,7 +15,7 @@ const PRODUCTS = [
     "name": "ProAir Wireless Earbuds",
     "category": "audio",
     "categoryLabel": "🎧 Audio",
-    "price": "$89",
+    "price": "$900",
     "oldPrice": "$129",
     "badge": "hot",
     "image": "assets/images/product-earbuds.png",
