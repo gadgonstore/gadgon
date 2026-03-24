@@ -15,7 +15,7 @@ const PRODUCTS = [
     "name": "ProAir Wireless Earbuds",
     "category": "audio",
     "categoryLabel": "🎧 Audio",
-    "price": "$900",
+    "price": "$980",
     "oldPrice": "$129",
     "badge": "hot",
     "image": "assets/images/product-earbuds.png",
