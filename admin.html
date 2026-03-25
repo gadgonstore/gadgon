@@ -704,31 +704,49 @@
             showLoader('Deploying changes to Vercel...');
 
             try {
-                // Step 1: Read current file to get SHA
-                const getRes = await axios.get(
-                    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${PRODUCTS_JS_PATH}`,
-                    { headers: apiHeaders() }
-                );
-                const sha = getRes.data.sha;
+                // Step 1: Read current file to get SHA (if exists)
+                let sha = null;
+                try {
+                    const getRes = await axios.get(
+                        `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${PRODUCTS_JS_PATH}`,
+                        { headers: apiHeaders() }
+                    );
+                    sha = getRes.data.sha;
+                } catch (err) {
+                    // 404 is fine, it means the file is new to the repo
+                    if (err.response?.status !== 404) {
+                        throw err;
+                    }
+                }
 
                 // Step 2: Push changes
+                const putData = {
+                    message: "Admin Dashboard: Update products and store config",
+                    content: utf8ToBase64(jsContent)
+                };
+                if (sha) putData.sha = sha;
+
                 const putRes = await axios.put(
                     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${PRODUCTS_JS_PATH}`,
-                    {
-                        message: "Admin Dashboard: Update products and store config",
-                        content: utf8ToBase64(jsContent), // btoa but safe for unicode
-                        sha: sha
-                    },
+                    putData,
                     { headers: apiHeaders() }
                 );
 
                 hideLoader();
-                showToast("Changes Pushed! Vercel is now deploying your updates live. 🚀");
+                showToast("Changes Pushed! Your updates are now live. 🚀");
 
             } catch (err) {
-                console.error(err);
+                console.error("Dashboard Save Exception:", err);
                 hideLoader();
-                showToast("Failed to push changes.", true);
+                const apiMsg = err.response?.data?.message || err.message;
+                showToast("Failed to push changes: " + apiMsg, true);
+                
+                // Special hint for 403 (often permissions) or 401 (token)
+                if (err.response?.status === 403) {
+                    alert("GitHub Access Denied (403). Ensure your token has 'Contents: Read & Write' permissions.");
+                } else if (err.response?.status === 401) {
+                    alert("Unauthorized (401). Your GitHub token might be invalid or expired.");
+                }
             }
         }
 
